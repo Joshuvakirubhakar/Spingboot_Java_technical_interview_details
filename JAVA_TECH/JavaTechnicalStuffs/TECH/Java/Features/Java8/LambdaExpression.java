@@ -23,25 +23,33 @@ import java.util.List;
 //}
 
 
+//public class LambdaExpression {
+//    public static void main(String[] args) {
+//        List<String> fruits = Arrays.asList("Apple", "Banana", "Cherry");
+//
+//        // Traditional way - anonymous class
+//        System.out.println("Traditional way:");
+//        fruits.forEach(new java.util.function.Consumer<String>() {
+//            @Override
+//            public void accept(String s) {
+//                System.out.println(s);
+//            }
+//        });
+//
+//        System.out.println("---");
+//        // Lambda way - concise and readable
+//        System.out.println("Lambda way:");
+//
+//        // Lambda way
+//        fruits.forEach(fruit -> System.out.println(fruit));
+//    }
+//}
+
+
 public class LambdaExpression {
     public static void main(String[] args) {
-        List<String> fruits = Arrays.asList("Apple", "Banana", "Cherry");
-
-        // Traditional way - anonymous class
-        System.out.println("Traditional way:");
-        fruits.forEach(new java.util.function.Consumer<String>() {
-            @Override
-            public void accept(String s) {
-                System.out.println(s);
-            }
-        });
-
-        System.out.println("---");
-        // Lambda way - concise and readable
-        System.out.println("Lambda way:");
-
-        // Lambda way
-        fruits.forEach(fruit -> System.out.println(fruit));
+        Runnable r = () -> System.out.println("Hello from Lambda!");
+        r.run();
     }
 }
 

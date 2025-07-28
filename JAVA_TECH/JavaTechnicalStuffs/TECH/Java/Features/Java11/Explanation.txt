@@ -1,5 +1,0 @@
-📌 Purpose:
-Create objects without exposing the creation logic to the client.
-
-🛠️ Use Case:
-When you have a super class with multiple subclasses and need to return one of the subclasses based on input.
