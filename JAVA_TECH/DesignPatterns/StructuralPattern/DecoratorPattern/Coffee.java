@@ -1,4 +1,6 @@
 package JAVA_TECH.DesignPatterns.StructuralPattern.DecoratorPattern;
 
-public class Coffee {
+public interface Coffee {
+    int cost();
+    String getDescription();
 }

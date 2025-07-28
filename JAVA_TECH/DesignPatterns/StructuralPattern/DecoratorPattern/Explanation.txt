@@ -1,0 +1,50 @@
+📌 Category: Structural Pattern
+📌 Purpose:
+Attach additional responsibilities to an object dynamically without affecting other objects of the same class.
+
+🛠️ When to use:
+To add behavior or responsibilities to objects at runtime.
+
+Alternative to subclassing for extending functionality.
+
+Example: Java I/O classes like BufferedReader decorating Reader.
+
+=================================================================================================
+Decorator Pattern — Code Flow Explained
+What happens step-by-step:
+BasicCoffee object creation
+
+BasicCoffee is the core component implementing the Coffee interface.
+
+It has base functionality: cost() = 50 and description "Basic Coffee".
+
+SugarDecorator wraps BasicCoffee
+
+new SugarDecorator(new BasicCoffee()) creates a SugarDecorator object wrapping the BasicCoffee.
+
+When you call cost(), SugarDecorator adds 10 to the cost of the wrapped BasicCoffee.
+
+Similarly, the description appends ", Sugar".
+
+MilkDecorator wraps SugarDecorator
+
+new MilkDecorator(...) wraps the sugar-decorated coffee.
+
+Calling cost() adds 20 to the cost of the wrapped SugarDecorator object.
+
+The description appends ", Milk".
+
+Calling final cost() and getDescription()
+
+When you call these on MilkDecorator, it calls the same methods on SugarDecorator, which calls on BasicCoffee.
+
+The costs accumulate: 50 (Basic) + 10 (Sugar) + 20 (Milk) = 80.
+
+Descriptions concatenate similarly: "Basic Coffee" + ", Sugar" + ", Milk".
+
+Why is this powerful?
+Flexible extension: You can add or remove decorators dynamically at runtime without changing BasicCoffee.
+
+Open/Closed Principle: Classes are open for extension, closed for modification.
+
+No subclass explosion: Instead of many subclasses (BasicCoffeeWithSugarAndMilk), you combine decorators.

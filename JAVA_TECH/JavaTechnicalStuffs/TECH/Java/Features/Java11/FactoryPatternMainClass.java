@@ -1,4 +1,4 @@
-package JAVA_TECH.DesignPatterns.Creational.Factory;
+package JAVA_TECH.DesignPatterns.TECH.Java.Features.Java11;
 
 public class FactoryPatternMainClass {
     public static void main(String[] args) {

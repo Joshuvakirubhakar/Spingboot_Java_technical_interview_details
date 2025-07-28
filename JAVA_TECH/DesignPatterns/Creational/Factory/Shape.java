@@ -1,4 +1,5 @@
 package JAVA_TECH.DesignPatterns.Creational.Factory;
 
-public class Shape {
+public interface Shape {
+    void draw();
 }

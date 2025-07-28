@@ -1,4 +1,5 @@
 package JAVA_TECH.DesignPatterns.StructuralPattern.Adapter;
 
-public class Voltage5V {
+public interface Voltage5V {
+    int output5V();
 }

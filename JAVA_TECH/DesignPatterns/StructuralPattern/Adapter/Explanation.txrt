@@ -1,0 +1,26 @@
+📌 Category: Structural Pattern
+📌 Purpose:
+Convert the interface of a class into another interface clients expect. Lets incompatible classes work together.
+
+🛠️ When to use:
+When you want to reuse existing classes but their interface doesn’t match what you need.
+
+Example: Wrapping legacy code, working with third-party libraries, or adapting data formats.
+
+Real-world analogy:
+You have a micro USB charger but your phone only supports USB-C — the adapter plugs in to convert the interface.
+
+
+
+
+========================================================================================
+Code flow explained:
+Voltage220V simulates an old charger outputting 220 volts.
+
+Voltage5V is the interface the client expects (like a USB-C charger outputting 5 volts).
+
+VoltageAdapter implements the target interface Voltage5V, but wraps the incompatible Voltage220V.
+
+When the client calls output5V(), the adapter internally calls output220V(), converts the voltage, and returns 5V.
+
+The client works seamlessly with the adapter without needing to change.

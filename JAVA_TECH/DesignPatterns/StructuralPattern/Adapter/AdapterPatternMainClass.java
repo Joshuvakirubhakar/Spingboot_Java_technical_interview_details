@@ -1,6 +1,6 @@
 package JAVA_TECH.DesignPatterns.StructuralPattern.Adapter;
 
-public class AdapterPatternExample {
+public class AdapterPatternMainClass {
     public static void main(String[] args) {
         Voltage220V oldCharger = new Voltage220V();
         Voltage5V charger = new VoltageAdapter(oldCharger);

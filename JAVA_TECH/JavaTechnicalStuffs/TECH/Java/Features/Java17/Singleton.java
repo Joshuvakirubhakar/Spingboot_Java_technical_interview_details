@@ -1,4 +1,4 @@
-package JAVA_TECH.DesignPatterns.Creational.Singleton;
+package JAVA_TECH.DesignPatterns.TECH.Java.Features.Java17;
 
 public class Singleton {
     private static Singleton instance;

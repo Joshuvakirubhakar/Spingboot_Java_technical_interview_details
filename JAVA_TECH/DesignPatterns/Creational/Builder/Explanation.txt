@@ -1,5 +1,14 @@
+📌 Category: Creational Pattern
 📌 Purpose:
-Create objects without exposing the creation logic to the client.
+Separate construction of a complex object from its representation so that the same construction process can create different representations.
 
-🛠️ Use Case:
-When you have a super class with multiple subclasses and need to return one of the subclasses based on input.
+🛠️ When to use:
+When an object has many optional parameters or complex construction.
+
+To avoid constructors with many parameters (telescoping constructor anti-pattern).
+
+Example: Building complex objects like StringBuilder, configuring HTTP requests.
+
+do we need to follow this pattern for every POJO?
+No, use it when the object construction is complex or has many optional parameters.
+For simple objects, a constructor or factory method is sufficient.
